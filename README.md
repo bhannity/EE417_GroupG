@@ -1,2 +1,2 @@
 # EE417_GroupG
-EE417 Group ^ Group Project
+EE417 Group G Group Project
