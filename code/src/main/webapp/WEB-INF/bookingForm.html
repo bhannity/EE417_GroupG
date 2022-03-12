@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css"rel="Stylesheet" type="text/css" />
+	<link href="css/form.css" rel="stylesheet">
+</head>
+    <body>
+	 
+		<h1>Room Booking Form</h1>
+
+        <form action=" " method="post">
+	
+		<label for="fname"><b style="font-size:20px">Full Name</b></label><br>
+        <input type="text" placeholder="Enter Full name" name="fname" required><br>
+		
+	    <label for="email"><b style="font-size:20px">Email Address</b></label><br>
+        <input type="email" placeholder="Enter Email" name="email" required><br>
+		
+		<label for="date"><b>Please select Date</b></label><br>
+	    <input type="text" id="txtDate" name="SelectedDate" placeholder="Select date"/><br>
+		
+        <label for="room"><b>Please Select Room</b></label><br>
+        <select class="form-control" id="room" type="text"><option>Select Room</option><br>
+			<option value="room">A</option>
+            <option value="room">B</option>
+            <option value="room">C</option>
+            <option value="room">D</option>
+            <option value="room">E</option>
+        </select><br><br>
+		
+       <label for="time"><b>Please Select Slots</b></label><br>
+       <select class="form-control" id="slot" type="time"><option>Select slot</option>
+			<option value="time">9:00 To 10:00</option>
+            <option value="time">10:00 To 11:00</option>
+		    <option value="time">11:00 To 12:00</option>
+            <option value="time">12:00 To 13:00</option>
+            <option value="time">13:00 T0 14:00</option>
+            <option value="time">14:00 To 15:00</option>
+            <option value="time">15:00 To 16:00</option>
+            <option value="time">16:00 T0 17:00</option>
+        </select><br><br>
+       <button type="submit">Submit</button>
+	</form>
+<script type="text/javascript">
+    $(function () {
+        $("#txtDate").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            // showOn: 'button',
+            // buttonOnly: true,
+            // button: 'A',
+            dateFormat: 'dd/mm/yy',
+            onSelect: function (dateString, txtDate) {
+                DisplayDate("Selected Date: " + dateString + "\nTextBox ID: " + txtDate.id);
+            }
+        });
+    });
+    function DisplayDate(message) {
+        alert(message);
+    };
+</script>
+
+</body>
+</html>
