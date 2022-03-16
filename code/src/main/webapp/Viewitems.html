@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/viewitems.css">
+  <script src="scripts/viewitems.js"></script>
+  
+  
+
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="register.html">Register</a>
+    <a href="login.html ">Login</a>
+    <a href="Admin.html"> Admin </a>
+</div>
+
+<div class="navbar">
+    <a href="./Home.html">Home</a>
+    <div class="subnav">
+        <button class="subnavbtn">Library Essentials <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="./Borrow.html">Borrow a Book</a>
+            <a href="./Return.html">Return a Book </a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">Services<i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="./BookRoom.html">Book a Room </a>
+           
+
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn"> Catalogue  <i class="fa fa-caret-down"></i></button>
+
+        <div class="subnav-content">
+            <a href="./Viewitems.html">View Items </a>
+           
+        </div>
+
+    </div>
+
+   
+
+  </div>
+
+  <h2>Catalogue</h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book's name.." title="Type in a name">
+
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Book</th>
+      <th style="width:40%;">Author</th>
+    </tr>
+    <tr>
+      <td>Ulysses </td>
+      <td>James Joyce</td>
+    </tr>
+    <tr>
+      <td>In Search of Lost Time </td>
+      <td>Marcel Proust</td>
+    </tr>
+    <tr>
+      <td>The Odyssey </td>
+      <td>Homer</td>
+    </tr>
+    <tr>
+      <td>Don Quixote </td>
+      <td>Miguel de Cervantes</td>
+    </tr>
+    <tr>
+      <td> One Hundred Years of Solitude </td>
+      <td>Gabriel Garcia Marquez</td>
+    </tr>
+    <tr>
+      <td>The Great Gatsby </td>
+      <td>IF. Scott Fitzgerald</td>
+    </tr>
+    <tr>
+      <td>Lolita </td>
+      <td>Vladimir Nabokov</td>
+    </tr>
+    <tr>
+      <td>Crime and Punishment </td>
+      <td>Fyodor Dostoyevsky</td>
+    </tr>
+  </table>
+
+  </body>
+
+</html>
