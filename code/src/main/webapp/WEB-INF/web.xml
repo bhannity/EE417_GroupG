@@ -18,6 +18,15 @@
 	   <servlet-name>regis_Srvlet</servlet-name>
 	   <url-pattern>/regis_Srvlet</url-pattern>
    </servlet-mapping>
+   
+   <servlet>
+	   <servlet-name>borr_Servlet</servlet-name>
+	   <servlet-class>borr_Servlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+	   <servlet-name>borr_Servlet</servlet-name>
+	   <url-pattern>/borr_Servlet</url-pattern>
+   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>login.html</welcome-file>
     <welcome-file>index.html</welcome-file>
