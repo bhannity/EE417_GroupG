@@ -37,7 +37,7 @@
         <button class="subnavbtn"> Catalogue  <i class="fa fa-caret-down"></i></button>
 
         <div class="subnav-content">
-            <a href="./Viewitems.html">View Items </a>
+            <a href="./Viewitems.jsp">View Items </a>
            
         </div>
 
@@ -53,18 +53,24 @@
   <h1>'Ulysses' James Joyce</h1>
  
   <p> Ulysses chronicles the appointments and encounters of the itinerant Leopold Bloom in Dublin in the course of an ordinary day, 16 June 1904  </p>
-  <p><button>Borrow</button></p>
+  <form method="POST" action="borr_Servlet"><p><button>Borrow</button></p>
+  <input type="text" name="name" value="Ulysses" hidden="true">
+  </form>
 
   <img src="images/in.jpg"  style="width:100%">
   <h1>'In Search of Lost Time' Marcel Proust</h1>
  
   <p> In Search of Lost Time follows the narrator's recollections of childhood and experiences into adulthood in the late 19th-century and early 20th-century high-society France, while reflecting on the loss of time and lack of meaning in the world.  </p>
-  <p><button>Borrow</button></p>
+  <form method="POST" action="borr_Servlet"><p><button>Borrow</button></p>
+  <input type="text" name="name" value="In Search of Lost Time" hidden="true">
+  
   <img src="images/O.jpg"  style="width:100%">
   <h1>'The Odyssey' Homer</h1>
  
   <p>The Odyssey is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still widely read by modern audiences. As with the Iliad, the poem is divided into 24 books. It follows the Greek hero Odysseus, king of Ithaca, and his journey home after the Trojan War </p>
-  <p><button>Borrow</button></p>
+  <form method="POST" action="borr_Servlet"><p><button>Borrow</button></p>
+  <input type="text" name="name" value="The Odyssey" hidden="true">
+  </form>
 </div>
 
 </body>
