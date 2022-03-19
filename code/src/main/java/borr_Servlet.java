@@ -36,7 +36,7 @@ public class borr_Servlet extends HttpServlet {
         ResultSet rs = null;   //result set object for receiving data 
         String JDBCUrl = "jdbc:mysql://localhost:3306/library"; //define the URL for your database connection. 
         String username = "root"; //local database usernanme
-        String password = "root"; //local database password
+        String password = ""; //local database password
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
         try {
@@ -55,8 +55,9 @@ public class borr_Servlet extends HttpServlet {
    	     stmt = con.prepareStatement("UPDATE library.BOOKS SET STKLVL = 0 WHERE TITLE = ?");
    	     stmt.clearParameters();       // Clears any previous parameters
 		 stmt.setString(1, formVal);
-		 request.getRequestDispatcher("/Borrow.html").include(request, response);
-		 stmt.executeUpdate();}
+		 stmt.executeUpdate();
+		 request.getRequestDispatcher("/Borrow.jsp").include(request, response);
+        }
    	     
          catch (SQLException e) {
    	     System.out.println("\nAn error has occurred during the Statement/ResultSet phase.  Please check the syntax and study the Exception details!");
