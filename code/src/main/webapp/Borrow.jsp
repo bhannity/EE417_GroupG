@@ -57,7 +57,7 @@
  %>
 <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
          url = "jdbc:mysql://localhost:3306/library"
-         user = "root"  password = "root"/>
+         user = "root"  password = ""/>
  
       <sql:query dataSource = "${snapshot}" var = "result">
       
