@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root {
+  --blue: #5b51e2;
+  --dark-blue: #382fa8;
+  --green: #1db85e;
+  --dark-green: #15944a;
+  --black: #444;
+  --light-color: #666;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --border-hover: 0.1rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  transition: width none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.heading span {
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
+  color: var(--black);
+  background: #fff;
+  border: var(--border);
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: var(--blue);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn2 {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: var(--green);
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--dark-blue);
+}
+
+.btn2:hover {
+  background: var(--dark-green);
+}
+
+.collection .collection-slider .box {
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  border: var(--border);
+  text-align: center;
+}
+
+.collection .collection-slider .box:hover {
+  border: var(--border-hover);
+}
+
+.collection .collection-slider .box .image {
+  padding: 1rem;
+  background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
+}
+
+.collection .collection-slider .box .image img {
+  height: 25rem;
+}
+
+.collection .collection-slider .box .content {
+  background: #eee;
+  padding: 1.5rem;
+  white-space: nowrap;
+}
+
+.collection .collection-slider .box .content h3 {
+  font-size: 2rem;
+  color: var(--black);
+  display: inline-block;
+}
+
+.collection .collection-slider .box .content .author {
+  font-size: 1.5rem;
+  color: var(--black);
+  padding-top: 1rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  border: var(--border-hover);
+  height: 4rem;
+  width: 4rem;
+  color: var(--black);
+  background: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--black);
+  color: #fff;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p i {
+  color: var(--blue);
+  padding-right: 0.5rem;
+}
+
+.footer .box-container .box p:hover i {
+  padding-right: 2rem;
+}
+
+.footer .credit {
+  border-top: var(--border);
+  margin-top: 2rem;
+  padding: 0 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--light-color);
+  text-align: center;
+}
+
+.footer .credit span {
+  color: var(--black);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+  background-color: grey;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: grey;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
