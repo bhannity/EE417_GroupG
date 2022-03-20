@@ -9,9 +9,9 @@ import java.sql.ResultSet;
 public class LoginDao {
 	
 	String sql = "select * from user where username=? and password=?";
-	String url = "jdbc:mysql://localhost:3306/library";
-	String username = "root";
-	String password = "";
+   String url = Common.getDatabaseUrlAndName();
+   String username = Common.getDatabaseUser();
+   String password = Common.getDatabasePassword();
 	
 	public boolean check(String uname, String psw) {
 		try {

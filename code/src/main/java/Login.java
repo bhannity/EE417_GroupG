@@ -28,6 +28,9 @@ public class Login extends HttpServlet {
 		
 		if(dao.check(username, pass)){
 			
+         session.setAttribute("dbUrl", Common.getDatabaseUrlAndName());
+         session.setAttribute("dbUser", Common.getDatabaseUser());
+         session.setAttribute("dbPassword", Common.getDatabasePassword());
 			session.setAttribute("username", username);
 			response.sendRedirect("Home.html");
 			

@@ -59,8 +59,8 @@
         </div>
       </div>
       <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-         url = "jdbc:mysql://localhost:3306/library"
-         user = "root"  password = "root"/>
+         url = "${sessionScope.dbUrl}"
+         user = "${sessionScope.dbUser}"  password = "${sessionScope.dbPassword}"/>
  
       <sql:query dataSource = "${snapshot}" var = "result">
 		SELECT id, username, email, password FROM library.admin</sql:query>
@@ -108,8 +108,8 @@
 	      </div>
 	   </div>
 	   <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-         url = "jdbc:mysql://localhost:3306/library"
-         user = "root"  password = "root"/>
+         url = "${sessionScope.dbUrl}"
+         user = "${sessionScope.dbUser}"  password = "${sessionScope.dbPassword}"/>
  
       <sql:query dataSource = "${snapshot}" var = "result">
 		SELECT user_id, username, fname, email,password FROM library.user</sql:query>

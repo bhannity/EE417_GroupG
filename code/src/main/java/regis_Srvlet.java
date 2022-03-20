@@ -49,9 +49,9 @@ public class regis_Srvlet extends HttpServlet {
         Statement stmt = null;
         ResultSet rs = null;
         int maxID = 0;
-        String JDBCUrl = "jdbc:mysql://localhost:3306/library"; //define the URL for your database connection. 
-        String username = "root"; //local database usernanme
-        String password = ""; //local database password, use "" for project upload
+        String JDBCUrl = Common.getDatabaseUrlAndName();
+        String username = Common.getDatabaseUser();
+        String password = Common.getDatabasePassword();
 
 	    PrintWriter out = response.getWriter();
 	    try {

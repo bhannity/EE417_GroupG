@@ -34,9 +34,9 @@ public class borr_Servlet extends HttpServlet {
 		Connection con = null;  //connection object
 		PreparedStatement stmt =null;
         ResultSet rs = null;   //result set object for receiving data 
-        String JDBCUrl = "jdbc:mysql://localhost:3306/library"; //define the URL for your database connection. 
-        String username = "root"; //local database usernanme
-        String password = ""; //local database password
+        String JDBCUrl = Common.getDatabaseUrlAndName();
+        String username = Common.getDatabaseUser();
+        String password = Common.getDatabasePassword();
         PrintWriter out = response.getWriter();
         response.setContentType("text/html");
         try {
