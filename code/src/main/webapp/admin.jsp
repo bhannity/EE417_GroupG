@@ -107,15 +107,9 @@
 	  		</form>
 	      </div>
 	   </div>
-<<<<<<< HEAD
 	   <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
          url = "${sessionScope.dbUrl}"
          user = "${sessionScope.dbUser}"  password = "${sessionScope.dbPassword}"/>
-=======
-	  <%-- <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
-         url = "jdbc:mysql://localhost:3306/library"
-         user = "root"  password = ""/>--%> 
->>>>>>> 4b9da49558587281b2feb4e3c0247c3b6f04d73b
  
       <sql:query dataSource = "${snapshot}" var = "result">
 		SELECT user_id, username, fname, email,password FROM library.user</sql:query>
