@@ -32,6 +32,7 @@ public class Login extends HttpServlet {
          session.setAttribute("dbUser", Common.getDatabaseUser());
          session.setAttribute("dbPassword", Common.getDatabasePassword());
 			session.setAttribute("username", username);
+			session.setAttribute("password", pass);
 			response.sendRedirect("Home.html");
 			
 		} else {
