@@ -105,7 +105,7 @@
 		    <input type="text" name="formName" value="upDatePassword" hidden="true">
 		    <input type="text" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
 		    <label for="pwd"><b style="font-size:20px">Current Password</b></label><br>
-		    <input type="text" value="<%= session.getAttribute("password")%>" name="pwd" required><br>
+		    <input type="text" value="<%= session.getAttribute("password")%>" name="pwd" disabled><br>
 					
 			<label for="npwd"><b style="font-size:20px">New Password</b></label><br>
 		    <input type="password" placeholder="Enter New Password" name="npwd" required><br>
@@ -140,13 +140,13 @@
 	
 		  <div class="container">
 		    <label for="email"><b style="font-size:20px">Current Email</b></label>
-		    <input type="email" value="${userEmail}" name="email" required><br>
+		    <input type="email" value="${userEmail}" name="email" disabled><br>
 					
 			<label for="nemail"><b style="font-size:20px">New Email Address</b></label>
 		    <input type="email" placeholder="Enter New Email" id ="nemail" name="nemail" required><br>
 		
 		    <label for="cemail"><b style="font-size:20px">Confirm new Email</b></label>
-		    <input type="email" placeholder="Confirm New Email" id ="cemail" name="cemail" onkeyup="compare_input();"required><br><br>
+		    <input type="email" placeholder="Confirm New Email" id ="cemail" name="cemail" onmouseout="compare_input();"required><br><br>
 		        
 		    <button type="submit">Submit</button>
 	
