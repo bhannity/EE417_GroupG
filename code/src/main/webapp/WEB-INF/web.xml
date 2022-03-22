@@ -27,6 +27,34 @@
 	   <servlet-name>borr_Servlet</servlet-name>
 	   <url-pattern>/borr_Servlet</url-pattern>
    </servlet-mapping>
+   
+   <servlet>
+	   <servlet-name>admin_Login</servlet-name>
+	   <servlet-class>admin_Login</servlet-class>
+   </servlet>
+   <servlet-mapping>
+	   <servlet-name>admin_Login</servlet-name>
+	   <url-pattern>/admin_Login</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+	   <servlet-name>admin_Servlet</servlet-name>
+	   <servlet-class>admin_Servlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+	   <servlet-name>admin_Servlet</servlet-name>
+	   <url-pattern>/admin_Servlet</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+	   <servlet-name>userDetailsMod</servlet-name>
+	   <servlet-class>userDetailsMod</servlet-class>
+   </servlet>
+   <servlet-mapping>
+	   <servlet-name>userDetailsMod</servlet-name>
+	   <url-pattern>/userDetailsMod</url-pattern>
+   </servlet-mapping>
+   
   <welcome-file-list>
     <welcome-file>login.html</welcome-file>
     <welcome-file>index.html</welcome-file>
