@@ -144,7 +144,7 @@
 
     <section class="collection" id="collection">
 
-        <h1 class="heading"> <span>library selection</span> </h1>
+        <h1 class="heading"> <span>Library Selection</span> </h1>
 
         <div class="swiper collection-slider">
 
@@ -353,7 +353,7 @@
         <div class="box-container">
 
             <div class="box">
-                <h3>contact info</h3>
+                <h3>Contact Info</h3>
                 <p href="#"> <i class="fas fa-phone"></i> +353861234567 </p>
                 <p href="#"> <i class="fas fa-phone"></i> +0460987654 </p>
                 <p href="#"> <i class="fas fa-envelope"></i> someone@mail.dcu.ie </p>
@@ -361,7 +361,7 @@
 
         </div>
 
-        <div class="credit"> created by <span>group g</span> | all rights reserved! </div>
+        <div class="credit"> Created By <span>Group G</span> | All Rights Reserved! </div>
 
     </section>
 

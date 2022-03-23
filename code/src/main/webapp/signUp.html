@@ -1,37 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
- <title>Login</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/login.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/borrow_style.css">
+  <link rel="stylesheet" href="css/formstyle.css">
+  <script defer src="./scripts/form.js"></script>
+
 </head>
+
 <body>
 
-<h1>Registration Form</h1>
+  <div class="navbar">
+    <a href="./Home.html">Home</a>
+    <div class="subnav">
+      <button class="subnavbtn">Library Essentials <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="./Borrow.html">Borrow a Book</a>
+        <a href="./Return.html">Return a Book </a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">Services<i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="./BookRoom.html">Book a Room </a>
 
-<form action="regis_Srvlet" method="post">
 
-  <div class="container">
-    <label for="uname"><b style="font-size:20px">Username</b></label><br>
-    <input type="text" placeholder="Enter Username" name="uname" required><br>
-	
-	<label for="fname"><b style="font-size:20px">Full Name</b></label><br>
-    <input type="text" placeholder="Enter Full name" name="fname" required><br>
-	
-	<label for="email"><b style="font-size:20px">Email Address</b></label><br>
-    <input type="email" placeholder="Enter Email" name="email" required><br>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn"> Catalogue <i class="fa fa-caret-down"></i></button>
 
-    <label for="psw"><b style="font-size:20px">Password</b></label><br>
-    <input type="password" placeholder="Enter Password" name="psw" required><br>
-        
-    <button type="submit">Submit</button>
+      <div class="subnav-content">
+        <a href="./Viewitems.jsp">View Items </a>
 
+      </div>
+
+    </div>
   </div>
 
+  <br><br><br>
+  <h1 class="heading"> <span>Register</span> </h1>
+
+  <!-- form starts-->
   <div class="container">
-
-
-	<b>Already have an account? </b><a href="login.html" class="ml-2" style="color:red"><u><b>Sign in</b></u></a><br>
+    
+    <form id="form">
+      <div class="input-control">
+        <label for="name1">Name</label>
+        <input id="name1" name="name1" type="text">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+        <div class="error"></div>
+      </div>
+      <div class="input-control">
+        <label for="password2">Confirm Password</label>
+        <input id="password2" name="password2" type="password">
+        <div class="error"></div>
+      </div>
+      <p>Already have an account? <a href="./login.html">Login</a></p>
+      <button type="submit" onclick="check()">Sign Up</button>
+    </form>
   </div>
-</form>
 
+  <!-- form ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <br>
+        <h3>Contact Info</h3>
+        <p href="#"> <i class="fas fa-phone"></i> +353861234567 </p>
+        <p href="#"> <i class="fas fa-phone"></i> +0460987654 </p>
+        <p href="#"> <i class="fas fa-envelope"></i> someone@mail.dcu.ie </p>
+      </div>
+
+    </div>
+
+    <div class="credit"> Created By <span>Group G</span> | All Rights Reserved! </div>
+
+  </section>
+
+  <!-- footer end -->
 </body>
+
 </html>
