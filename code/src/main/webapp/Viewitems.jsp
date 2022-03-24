@@ -23,6 +23,7 @@
     <a href="register.html">Register</a>
     <a href="login.html ">Login</a>
     <a href="Admin.html"> Admin </a>
+    <a href="Logout"> Logout </a>
 </div>
 
 <div class="navbar">
