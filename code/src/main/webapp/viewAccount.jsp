@@ -96,6 +96,45 @@
    			 </c:choose>
 				
 	      	  </div>
+	      	  
+	      <sql:query dataSource = "${snapshot}" var = "result">
+		SELECT room_no, BookDate, TIMESLOT FROM library.room where username="<%= session.getAttribute("username")%>"</sql:query>
+<div>
+
+<div style="background-color:#87CEFA;text-align:center">
+      	  <div style="text-align:center"><br><br>
+	      	  <h3>Rooms Booked</h3>
+	      	  <c:choose>
+		        <c:when test="${result.rowCount == 0}">
+		            <h4>Currently Rooms Booked</h4>
+		        </c:when>
+		        <c:otherwise>
+		            <table style="margin-left: auto;margin-right: auto;">
+				  <tr>
+				    <th>#</th>
+				    <th>Room</th>
+				    <th>Date Booked</th>
+				    <th>Time Slot</th>
+				    <th>Action</th>
+				  </tr>
+				  <c:set var="count" value="1" scope="page" />
+				  <c:forEach var = "row" items = "${result.rows}">
+			            <tr>
+			               <td><c:out value = "${count}"/></td>
+			               <td><c:out value = "${row.room_no}"/></td>
+			               <td><c:out value = "${row.BookDate}"/></td>
+			               <td><c:out value = "${row.TIMESLOT}"/></td>
+			               <td><form method="POST" action="book_Room"><p><button class="btn2">Cancel Room</button></p>
+								<input type="text" name="room_action" value="${row.room_no}" hidden="true">
+								</form></td>
+			            </tr>
+			         <c:set var="count" value="${count + 1}" scope="page"/>
+			         </c:forEach>
+				</table>
+       		   </c:otherwise>
+   			 </c:choose>
+				
+	      	  </div>
 	      <div>
 	      
 	      <div>
