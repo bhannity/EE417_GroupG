@@ -5,14 +5,14 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+//import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class userDetailsMod
  */
@@ -42,7 +42,8 @@ public class userDetailsMod extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String formVal = request.getParameter("formName");
-		String session = request.getParameter("sessionID");
+		String session1 = request.getParameter("sessionID");
+		HttpSession session = request.getSession();
 		PrintWriter out = response.getWriter();
 		String url = Common.getDatabaseUrlAndName();
 	    String username = Common.getDatabaseUser();
@@ -62,7 +63,7 @@ public class userDetailsMod extends HttpServlet {
 				    	PreparedStatement st = con.prepareStatement(sql);
 
 				    	st.setString(1,  conformMail);
-				    	st.setString(2, session);
+				    	st.setString(2, session1);
 				    	st.executeUpdate();
 					
 				} catch(Exception e) {
@@ -84,6 +85,7 @@ public class userDetailsMod extends HttpServlet {
 			  
 			  if(newPaSS.equals(conformpASS)) {
 				   String sql = "UPDATE user SET PASSWORD=? where username=?";
+				   session.setAttribute("password", newPaSS);
 				   			   
 				   try {
 				        Class.forName("com.mysql.cj.jdbc.Driver");
@@ -91,8 +93,9 @@ public class userDetailsMod extends HttpServlet {
 				    	PreparedStatement st = con.prepareStatement(sql);
 
 				    	st.setString(1,  newPaSS);
-				    	st.setString(2, session);
+				    	st.setString(2, session1);
 				    	st.executeUpdate();
+			
 					
 				} catch(Exception e) {
 					e.printStackTrace();
@@ -108,7 +111,7 @@ public class userDetailsMod extends HttpServlet {
 		    break;
 		}
 		//String pass = request.getParameter("pwd");
-		System.out.println("\nSession  is   = "+ session);
+		System.out.println("\nsession1  is   = "+ session1);
 		
 	}
 
