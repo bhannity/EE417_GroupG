@@ -19,7 +19,7 @@
 
 
   <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Ã—</a>
     <a href="register.html">Register</a>
     <a href="login.html ">Login</a>
     <a href="Admin.html"> Admin </a>
@@ -33,6 +33,7 @@
         <div class="subnav-content">
             <a href="./Borrow.jsp">Borrow a Book</a>
             <a href="./Return.html">Return a Book </a>
+	    <a href="./viewAccount.jsp">View Account </a>
         </div>
     </div>
     <div class="subnav">
