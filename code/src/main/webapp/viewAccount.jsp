@@ -4,6 +4,7 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,8 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/Borrow.css">
- 
-  
+  <link rel="stylesheet" href="css/Home.css">
+  <link href="css/login.css" rel="stylesheet">
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="register.html">Register</a>
@@ -70,7 +71,7 @@
 
 <div style="background-color:#87CEFA;text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h3>Books on Loan</h3>
+	      	  <h2>Books on Loan</h2>
 	      	  <c:choose>
 		        <c:when test="${result.rowCount == 0}">
 		            <h4>Currently no books on Loan</h4>
@@ -103,7 +104,7 @@
 
 <div style="background-color:#87CEFA;text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h3>Rooms Booked</h3>
+	      	  <h2>Rooms Booked</h2>
 	      	  <c:choose>
 		        <c:when test="${result.rowCount == 0}">
 		            <h4>Currently Rooms Booked</h4>
@@ -124,8 +125,10 @@
 			               <td><c:out value = "${row.room_no}"/></td>
 			               <td><c:out value = "${row.BookDate}"/></td>
 			               <td><c:out value = "${row.TIMESLOT}"/></td>
-			               <td><form method="POST" action="book_Room"><p><button class="btn2">Cancel Room</button></p>
-								<input type="text" name="room_action" value="${row.room_no}" hidden="true">
+			               <td><form method="POST" action="book_Room">
+			               <input type="text" name="room_action" value="${row.room_no}" hidden="true">
+			               <p><button class="btn2">Cancel Room</button></p>
+					
 								</form></td>
 			            </tr>
 			         <c:set var="count" value="${count + 1}" scope="page"/>
@@ -139,12 +142,12 @@
 	      
 	      <div>
 	      <hr>
-	      <h3>Update Password</h3>
+	      <h2>Update Password</h2>
 	      <form action="userDetailsMod" method="post" >
 	
 		  <div class="container">
-		    <input type="text" name="formName" value="upDatePassword" hidden="true">
-		    <input type="text" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
+		    <input type="hidden" name="formName" value="upDatePassword" hidden="true">
+		    <input type="hidden" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
 		    <label for="pwd"><b style="font-size:20px">Current Password</b></label><br>
 		    <input type="text" value="<%= session.getAttribute("password")%>" name="pwd" disabled><br>
 					
@@ -174,10 +177,10 @@
 		        </c:otherwise>
 		    </c:choose>
 	      <hr>
-	      <h3>Update Email address</h3>
+	      <h2>Update Email address</h2>
 	      <form action="userDetailsMod" method="post">
-	      <input type="text" name="formName" value="upDateEmail" hidden="true">
-	      <input type="text" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
+	      <input type="hidden" name="formName" value="upDateEmail" hidden="true">
+	      <input type="hidden" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
 	
 		  <div class="container">
 		    <label for="email"><b style="font-size:20px">Current Email</b></label>

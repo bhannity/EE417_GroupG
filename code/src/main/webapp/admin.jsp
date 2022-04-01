@@ -4,6 +4,7 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -26,10 +27,10 @@
   
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">�</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">ï¿½</a>
         <a href="register.html">Register</a>
         <a href="login.html ">Login</a>
-        <a href="Admin.html"> Admin </a>
+        <a href="Admin.html">Admin</a>
     </div>
     
     <div class="navbar">
