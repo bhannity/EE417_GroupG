@@ -27,7 +27,7 @@ input[type=text], input[type=email], select[type=text], select[type=time] {
   box-sizing: border-box;
 }
 
-button {
+.ForumButton {
   background-color: green;
   font-size: 20px;
   color: white;
