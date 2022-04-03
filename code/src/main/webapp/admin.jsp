@@ -38,14 +38,13 @@
         <div class="subnav">
             <button class="subnavbtn">Library Essentials <i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="./Borrow.html">Borrow a Book</a>
-                <a href="./Return.html">Return a Book </a>
+                <a href="./Borrow.html">Borrow/Return a Book</a>
             </div>
         </div>
         <div class="subnav">
             <button class="subnavbtn">Services<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="./BookRoom.html">Book a Room </a>
+                <a href="./bookingForm.html">Book a Room </a>
                
     
             </div>

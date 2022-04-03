@@ -124,13 +124,13 @@ public class regis_Srvlet extends HttpServlet {
 		     }
 		     catch (Exception ex) {
 		         System.out.println("An error occurred while closing down connection/statement");
-		         out.print("<br><H2 style='color:red;font-style:bold;text-align:center'>Your Registration has been unsuccessfull!,</br> Please try again </H2>");
+		         out.print("<br><H2 style='color:red;font-style:bold;text-align:center'>Your Registration has been unsuccessful!,</br> Please try again </H2>");
 				 request.getRequestDispatcher("/signUp.html").include(request, response); //request dispatcher
 				 out.close();
 	            }
 	        }
 	        
-	    out.print("<br><H2 style='color:blue;font-style:bold;text-align:center'>Your Registration has been successfull!,</br> Please login to continue </H2>");
+	    out.print("<br><H2 style='color:blue;font-style:bold;text-align:center'>Your Registration has been successful!,</br> Please login to continue </H2>");
 		request.getRequestDispatcher("/login.html").include(request, response); //request dispatcher
 		out.close();
 	}
