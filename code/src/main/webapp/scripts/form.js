@@ -1,9 +1,9 @@
 const form = document.getElementById('form');
-const name1 = document.getElementById('name1');
-const username = document.getElementById('username');
+const fname = document.getElementById('fname');
+const uname = document.getElementById('uname');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const psw = document.getElementById('psw');
+const psw2 = document.getElementById('psw2');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -40,22 +40,22 @@ const isValidEmail = email => {
 const validateInputs = () => {
 
     //trim to get rid of white space
-    const name1Value = name1.value.trim();
-    const usernameValue = username.value.trim();
+    const fnameValue = fname.value.trim();
+    const unameValue = uname.value.trim();
     const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const pswValue = psw.value.trim();
+    const psw2Value = psw2.value.trim();
 
-    if(name1Value === '') {
-        setError(name1, 'Name is required');
+    if(fnameValue === '') {
+        setError(fname, 'Name is required');
     } else {
-        setSuccess(name1);
+        setSuccess(fname);
     }
 
-    if(usernameValue === '') {
-        setError(username, 'Username is required');
+    if(unameValue === '') {
+        setError(uname, 'Username is required');
     } else {
-        setSuccess(username);
+        setSuccess(uname);
     }
 
     if(emailValue === '') {
@@ -66,20 +66,20 @@ const validateInputs = () => {
         setSuccess(email);
     }
 
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.');
+    if(pswValue === '') {
+        setError(psw, 'Password is required');
+    } else if (pswValue.length < 8 ) {
+        setError(psw, 'Password must be at least 8 character.');
     } else {
-        setSuccess(password);
+        setSuccess(psw);
     }
 
-    if(password2Value === '') {
-        setError(password2, 'Please confirm your password');
-    } else if (password2Value !== passwordValue) {
-        setError(password2, "Passwords don't match");
+    if(psw2Value === '') {
+        setError(psw2, 'Please confirm your password');
+    } else if (psw2Value !== pswValue) {
+        setError(psw2, "Passwords don't match");
     } else {
-        setSuccess(password2);
+        setSuccess(psw2);
     }
 };
 
