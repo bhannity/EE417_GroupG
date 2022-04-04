@@ -39,7 +39,7 @@
         <div class="subnav">
             <button class="subnavbtn">Library Essentials <i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="./Borrow.html">Borrow/Return a Book</a>
+                <a href="./Borrow.jsp">Borrow/Return a Book</a>
             </div>
         </div>
         <div class="subnav">
