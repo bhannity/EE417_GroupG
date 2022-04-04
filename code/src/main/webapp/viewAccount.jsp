@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
@@ -14,12 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/Borrow.css">
+  <link rel="stylesheet" href="css/Admin.css">
   <link rel="stylesheet" href="css/Home.css">
   <link href="css/login.css" rel="stylesheet">
+  <script src="scripts/Home.js"></script>
+	
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     <a href="register.html">Register</a>
-    <a href="login.html ">Login</a>
     <a href="Admin.html"> Admin </a>
     <a href="Logout"> Logout </a>
 </div>
@@ -50,6 +52,10 @@
         </div>
 
     </div>
+	<div class="subnav">
+            <button class="subnavbtn" onclick="openNav()">☰</button>
+
+        </div>
   </div>
   <style>
 		table, th, td {
@@ -68,15 +74,15 @@
 		SELECT TITLE, DUE_DATE FROM library.BOOKS where borrowed_By="<%= session.getAttribute("username")%>"</sql:query>
 <div>
 
-<div style="background-color:#87CEFA;text-align:center">
+<div style="text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h2>Books on Loan</h2>
+	      	  <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Books on Loan</h3>
 	      	  <c:choose>
 		        <c:when test="${result.rowCount == 0}">
 		            <h4>Currently no books on Loan</h4>
 		        </c:when>
 		        <c:otherwise>
-		            <table style="margin-left: auto;margin-right: auto;">
+		            <table class = "center" id = "customers">
 				  <tr>
 				    <th>#</th>
 				    <th>TITLE</th>
@@ -101,15 +107,15 @@
 		SELECT room_no, BookDate, TIMESLOT FROM library.room where username="<%= session.getAttribute("username")%>"</sql:query>
 <div>
 
-<div style="background-color:#87CEFA;text-align:center">
+<div style="text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h2>Rooms Booked</h2>
+	      	  <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Rooms Booked</h3>
 	      	  <c:choose>
 		        <c:when test="${result.rowCount == 0}">
-		            <h4>Currently Rooms Booked</h4>
+		            <h4>Currently no Rooms Booked</h4>
 		        </c:when>
 		        <c:otherwise>
-		            <table style="margin-left: auto;margin-right: auto;">
+		            <table class = "center" id = "customers">
 				  <tr>
 				    <th>#</th>
 				    <th>Room</th>
@@ -141,10 +147,10 @@
 	      
 	      <div>
 	      <hr>
-	      <h2>Update Password</h2>
+	      <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Update Password</h3>
 	      <form action="userDetailsMod" method="post" >
 	
-		  <div class="container">
+		  <div>
 		    <input type="hidden" name="formName" value="upDatePassword" hidden="true">
 		    <input type="hidden" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
 		    <label for="pwd"><b style="font-size:20px">Current Password</b></label><br>
@@ -176,12 +182,12 @@
 		        </c:otherwise>
 		    </c:choose>
 	      <hr>
-	      <h2>Update Email address</h2>
+	      <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Update Email address</h3>
 	      <form action="userDetailsMod" method="post">
 	      <input type="hidden" name="formName" value="upDateEmail" hidden="true">
 	      <input type="hidden" name="sessionID" value="<%= session.getAttribute("username")%>" hidden="true">
 	
-		  <div class="container">
+		  <div>
 		    <label for="email"><b style="font-size:20px">Current Email</b></label>
 		    <input type="email" value="${userEmail}" name="email" disabled><br>
 					
