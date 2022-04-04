@@ -28,7 +28,7 @@
   
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">ï¿½</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <a href="register.html">Register</a>
         <a href="Admin.html">Admin</a>
 	<a href="Logout">Logout</a>
