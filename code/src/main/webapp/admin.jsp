@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/Admin.css">
     <link rel="stylesheet" href="css/Home.css">
     <link href="css/login.css" rel="stylesheet">
+    <script src="scripts/Home.js"></script>
     <style>
 		table, th, td {
 		  border: 1px solid black;
@@ -29,8 +30,8 @@
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">ï¿½</a>
         <a href="register.html">Register</a>
-        <a href="login.html ">Login</a>
         <a href="Admin.html">Admin</a>
+	<a href="Logout">Logout</a>
     </div>
     
     <div class="navbar">
@@ -57,6 +58,10 @@
            
             </div>
         </div>
+	    <div class="subnav">
+            <button class="subnavbtn" onclick="openNav()">☰</button>
+
+        </div>
       </div>
       <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
          url = "${sessionScope.dbUrl}"
@@ -65,10 +70,10 @@
       <sql:query dataSource = "${snapshot}" var = "result">
 		SELECT id, username, email, password FROM library.admin</sql:query>
       
-      <div style="background-color:#87CEFA;text-align:center">
+      <div style="text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h3>Admin Records</h3>
-				<table style="margin-left: auto;margin-right: auto;">
+	      	  <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Admin Records</h3>
+				<table class = "center" id = "customers">
   
 				  <tr>
 				    <th>Admin ID</th>
@@ -88,17 +93,17 @@
 	      	  </div>
 	      <div>
 	      <hr>
-	      <h3>Add new Administrator</h3>
+	      <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Add new Administrator</h3>
 	      <form action="admin_Servlet" method="post">
 	
-		  <div class="container">
-		    <label for="uname"><b style="font-size:20px">Username</b></label><br>
+		  <div>
+		    <label for="uname"><h style="font-size:20px">Username</h></label><br>
 		    <input type="text" placeholder="Enter Username" name="uname" required><br>
 					
-			<label for="email"><b style="font-size:20px">Email Address</b></label><br>
+			<label for="email"><h style="font-size:20px">Email Address</h></label><br>
 		    <input type="email" placeholder="Enter Email" name="email" required><br>
 		
-		    <label for="psw"><b style="font-size:20px">Password</b></label><br>
+		    <label for="psw"><h style="font-size:20px">Password</h></label><br>
 		    <input type="password" placeholder="Enter Password" name="psw" required><br>
 		        
 		    <button type="submit">Submit</button>
@@ -114,10 +119,10 @@
       <sql:query dataSource = "${snapshot}" var = "result">
 		SELECT user_id, username, fname, email,password FROM library.user</sql:query>
 		<hr>
-	   <div style="background-color:#AFEEEE;text-align:center">
+	   <div style="text-align:center">
       	  <div style="text-align:center"><br><br>
-	      	  <h3>Users Records</h3>
-				<table style="margin-left: auto;margin-right: auto;">
+	      	  <h3 style="font-size:50px; font-family: 'Brush Script MT', cursive;">Users Records</h3>
+				<table class = "center" id = "customers">
 				  <tr>
 				    <th>User ID</th>
 				    <th>USERNAME</th>
@@ -135,6 +140,7 @@
 			            </tr>
 			         </c:forEach>
 				</table>
+		  <br><br><br><br><br>
 	      	</div>
 	   </div>
 </body>
