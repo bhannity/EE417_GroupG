@@ -26,7 +26,7 @@
  
       <sql:query dataSource = "${snapshot}" var = "result">
       
-		SELECT TITLE, STKLVL FROM library.BOOKS</sql:query>
+		SELECT TITLE, STKLVL FROM library.books</sql:query>
 
 <h2 style="text-align:center">Books</h2>
 <c:forEach var = "row" items = "${result.rows}">

@@ -63,7 +63,7 @@
  
       <sql:query dataSource = "${snapshot}" var = "result">
       
-		SELECT ID, TITLE, AUTHOR, ISBN, DESCRIP, GENRE, STKLVL FROM library.BOOKS</sql:query>
+		SELECT ID, TITLE, AUTHOR, ISBN, DESCRIP, GENRE, STKLVL FROM library.books</sql:query>
   
   <h2>Catalogue</h2>
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the book's name.." title="Type in a name">

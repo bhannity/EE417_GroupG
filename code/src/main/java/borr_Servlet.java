@@ -66,7 +66,7 @@ public class borr_Servlet extends HttpServlet {
         }
         try {
    	     System.out.println("\nConnection Successful..... creating statement....");
-  	     stmt = con.prepareStatement("UPDATE library.BOOKS SET STKLVL = 0,borrowed_By = ?,DUE_DATE=? WHERE TITLE = ?");
+  	     stmt = con.prepareStatement("UPDATE library.books SET STKLVL = 0,borrowed_By = ?,DUE_DATE=? WHERE TITLE = ?");
    	     stmt.clearParameters();       // Clears any previous parameters
    	     stmt.setString(1, sessID);
    	     stmt.setString(2, dueDate);

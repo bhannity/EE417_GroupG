@@ -71,7 +71,7 @@
          user = "${sessionScope.dbUser}"  password = "${sessionScope.dbPassword}"/>
       <c:set var="useSession" value="@userSess" scope="page" />
       <sql:query dataSource = "${snapshot}" var = "result">
-		SELECT TITLE, DUE_DATE FROM library.BOOKS where borrowed_By="<%= session.getAttribute("username")%>"</sql:query>
+		SELECT TITLE, DUE_DATE FROM library.books where borrowed_By="<%= session.getAttribute("username")%>"</sql:query>
 <div>
 
 <div style="text-align:center">

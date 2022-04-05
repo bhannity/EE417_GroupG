@@ -59,7 +59,7 @@ public class ret_Servlet extends HttpServlet {
         }
         try {
    	     System.out.println("\nConnection Successful..... creating statement....");
-   	     stmt = con.prepareStatement("UPDATE library.BOOKS SET STKLVL = 1,borrowed_By = NULL, DUE_DATE=NULL WHERE TITLE = ?");
+   	     stmt = con.prepareStatement("UPDATE library.books SET STKLVL = 1,borrowed_By = NULL, DUE_DATE=NULL WHERE TITLE = ?");
    	     stmt.clearParameters();       // Clears any previous parameters
 		 stmt.setString(1, formVal);
 		 stmt.executeUpdate();
