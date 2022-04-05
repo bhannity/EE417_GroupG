@@ -53,8 +53,9 @@ public class admin_Login extends HttpServlet {
 		   session.setAttribute("dbUrl", Common.getDatabaseUrlAndName());
 		   session.setAttribute("dbUser", Common.getDatabaseUser());
 		   session.setAttribute("dbPassword", Common.getDatabasePassword());
-			session.setAttribute("username", username);
-         response.sendRedirect("admin.jsp");
+		   session.setAttribute("username", username);
+		   session.setAttribute("password", pass);
+           response.sendRedirect("admin.jsp");
 			
 		} else {
 						 
