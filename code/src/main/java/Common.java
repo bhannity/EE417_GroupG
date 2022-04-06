@@ -2,10 +2,10 @@
 
 public class Common {
 
-   private static String DatabaseUrl = "jdbc:mysql://localhost/";
+   private static String DatabaseUrl = "jdbc:mysql://ee417-db.cvmof7us33ml.eu-west-1.rds.amazonaws.com:3306/";
    private static String DatabaseName = "library";
-   private static String DatabaseUser = "root";
-   private static String DatabasePw = "";
+   private static String DatabaseUser = "admin";
+   private static String DatabasePw = "ee417groupg";
 
    public static String getDatabaseUrl(){
       return DatabaseUrl;
